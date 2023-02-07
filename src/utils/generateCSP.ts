@@ -1,5 +1,10 @@
 // utils/generate-csp.ts
-type Directive = ""; /* See the Gist link below */
+type Directive =
+  | "default-src"
+  | "script-src-elem"
+  | "script-src"
+  | "connect-src"
+  | "style-src"; /* See the Gist link below */
 type Value = string;
 interface Options {
   devOnly?: boolean;
