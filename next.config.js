@@ -7,7 +7,7 @@ const nextConfig = {
     const ContentSecurityPolicy = `
   default-src 'none';
   script-src * data: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval';
-  style-src 'unsafe-inline';
+  style-src '';
   font-src 'self' https://fonts.gstatic.com;  
   img-src 'self';
   base-uri 'self';
