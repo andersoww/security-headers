@@ -8,7 +8,8 @@ export default function Document() {
     <Html lang="pt">
       <Head nonce={nonce}>
         <meta charSet="utf-8" />
-        {/* <meta httpEquiv="Content-Security-Policy" content={csp} /> */}
+        <meta property="csp-nonce" content={nonce} />
+        <meta httpEquiv="Content-Security-Policy" content={csp} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
