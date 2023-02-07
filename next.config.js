@@ -4,17 +4,17 @@ const nextConfig = {
 
   async headers() {
     const url = process.env.NEXT_PUBLIC_URL_API;
-    const ContentSecurityPolicy = `
-  default-src 'none';
-  script-src * data: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval';
-  style-src 'self' https://fonts.googleapis.com;
-  font-src 'self' https://fonts.gstatic.com;  
-  img-src 'self';
-  base-uri 'self';
-  connect-src 'self' ${url?.replace("/v1", "")} ws: ${
-      process.env.NEXT_PUBLIC_URL_API_SERVICES
-    };
-`;
+    //     const ContentSecurityPolicy = `
+    //   default-src 'none';
+    //   script-src * data: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval';
+    //   style-src 'self' https://fonts.googleapis.com;
+    //   font-src 'self' https://fonts.gstatic.com;
+    //   img-src 'self';
+    //   base-uri 'self';
+    //   connect-src 'self' ${url?.replace("/v1", "")} ws: ${
+    //       process.env.NEXT_PUBLIC_URL_API_SERVICES
+    //     };
+    // `;
     return [
       {
         source: "/(.*)",
@@ -39,10 +39,10 @@ const nextConfig = {
             key: "Strict-Transport-Security",
             value: "max-age=63072000; includeSubDomains; preload",
           },
-          {
-            key: "Content-Security-Policy",
-            value: ContentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
-          },
+          // {
+          //   key: "Content-Security-Policy",
+          //   value: ContentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
+          // },
         ],
       },
     ];
