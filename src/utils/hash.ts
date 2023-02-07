@@ -14,7 +14,7 @@ const generateCsp = (): [csp: string, nonce: string] => {
   csp += `base-uri 'self';`;
   csp += `img-src 'self';`;
   csp += `style-src https://fonts.googleapis.com 'unsafe-inline';`;
-  csp += `font-src 'self' https://fonts.gstatic.com;`;
+  csp += `font-src https://fonts.gstatic.com;`;
   if (!production) {
     csp += `connect-src 'self' ${url?.replace("/v1", "")} ws: ${
       process.env.NEXT_PUBLIC_URL_API_SERVICES
