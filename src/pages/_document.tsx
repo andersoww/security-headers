@@ -6,10 +6,9 @@ export default function Document() {
 
   return (
     <Html lang="pt">
-      <Head nonce={nonce}>
+      <Head>
         <meta charSet="utf-8" />
-        <meta property="csp-nonce" content={nonce} />
-        <meta httpEquiv="Content-Security-Policy" content={csp} />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
@@ -19,7 +18,7 @@ export default function Document() {
       </Head>
       <body>
         <Main />
-        <NextScript nonce={nonce} />
+        <NextScript />
       </body>
     </Html>
   );
