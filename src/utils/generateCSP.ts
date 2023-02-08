@@ -37,7 +37,7 @@ const generateCSP = ({ nonce }: generateCSPProps = {}) => {
   add("connect-src", `'self'`, { devOnly: true });
 
   // script-src-elem
-  add("script-src-elem", `'self'`);
+  // add("script-src-elem", `'self'`);
   add("script-src-elem", `'nonce-${nonce}'`);
 
   // style-src
